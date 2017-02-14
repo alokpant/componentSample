@@ -146,6 +146,8 @@ $newsletter_container_list_item_twitter_background:             #55ACEE
 $newsletter_container_list_item_linkedin_background:            #0077B5
 $newsletter_container_list_item_text_color:                     white
 $newsletter_container_upcoming_project_background_connect:      #F6F6F6
+$newsletter_container_upcoming_project_link_color:              red
+$newsletter_container_upcoming_project_title_color:             black
 
 .newsletter_container_upcoming_project--image_container
   height: 140px
@@ -263,13 +265,12 @@ $newsletter_container_upcoming_project_background_connect:      #F6F6F6
 .newsletter_container_upcoming_project--title
   width: 100%
   display: inline-block
+  color: $newsletter_container_upcoming_project_title_color
 
 .newsletter_container_upcoming_project--linked_list
   width: 100%
   display: inline-block
-
-.newsletter_container_upcoming_project--linked_list
-  margin-top: 10px
+  margin-top: 20px
 
 .newsletter_container_upcoming_project--list_item
   color: $newsletter_container_list_item_text_color
@@ -278,10 +279,12 @@ $newsletter_container_upcoming_project_background_connect:      #F6F6F6
   font-size: 0.875rem
   margin-right: 10px
   padding: 10px
-
+  position: relative
+  vertical-align: middle
 
 .facebook
   background: $newsletter_container_list_item_facebook_background
+  margin-right: 5px
 
 .twitter
   background: $newsletter_container_list_item_twitter_background
@@ -289,8 +292,30 @@ $newsletter_container_upcoming_project_background_connect:      #F6F6F6
 .linkedin
   background: $newsletter_container_list_item_linkedin_background
 
-
 .newsletter_container_upcoming_project--list_text,
 .newsletter_container_upcoming_project--list_icon,
 .newsletter_container_upcoming_project--list_count
   display: inline-block
+  line-height: 20px
+  vertical-align: middle
+
+.newsletter_container_upcoming_project--list_text
+  margin-right: 5px
+  @media (max-width: $medium-breakpoint)
+    display: none
+
+
+.newsletter_container_upcoming_project--list_icon
+  width: 20px
+  height: 20px
+  background: black
+
+  @media (min-width: $medium-breakpoint)
+    margin-right: 5px
+
+.newsletter_container_upcoming_project--links
+  color: $newsletter_container_upcoming_project_link_color
+  display: block
+
+  @media (min-width: $medium-breakpoint)
+    display: inline-block
