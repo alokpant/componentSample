@@ -243,18 +243,21 @@ $newsletter_container_upcoming_project_title_color:             black
 .newsletter_container_upcoming_project--amount_text
   font-size: 0.715rem
 
-
-
-
-
-.newsletter_container_upcoming_project--connect
-  width: calc(100% - 20px)
-  padding: 10px
-  background: $newsletter_container_upcoming_project_background_connect
+.newsletter_container_upcoming_project--tshirt_image
+  display: none
+  float: right
+  height: 60px
+  width: 70px
+  background: orange
 
   @media (min-width: $small-breakpoint)
-    width: calc(100% - 40px)
-    padding: 10px 20px
+    display: block
+
+.newsletter_container_upcoming_project--connect
+  background: $newsletter_container_upcoming_project_background_connect
+  padding: 10px
+  overflow: hidden
+  width: calc(100% - 20px)
 
 .newsletter_container_upcoming_project--tshirt_image
   background: blue
@@ -262,15 +265,33 @@ $newsletter_container_upcoming_project_title_color:             black
   width: 80px
   display: none
 
+  @media (min-width: $medium-breakpoint)
+    display: block
+    float: right
+
+.newsletter_container_upcoming_project--link_container
+  width: 100%
+  float: left
+
+  @media (min-width: $medium-breakpoint)
+    margin-right: -80px
+
+
 .newsletter_container_upcoming_project--title
   width: 100%
   display: inline-block
   color: $newsletter_container_upcoming_project_title_color
 
+  @media (min-width: $medium-breakpoint)
+    margin-right: 100px
+
 .newsletter_container_upcoming_project--linked_list
   width: 100%
   display: inline-block
   margin-top: 20px
+
+  @media (min-width: $medium-breakpoint)
+    margin-right: 100px
 
 .newsletter_container_upcoming_project--list_item
   color: $newsletter_container_list_item_text_color
