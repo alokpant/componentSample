@@ -1,48 +1,53 @@
 .newsletter
-  .newsletter--date 9:24, April 12
+  .newsletter--date
+    .newsletter_date--time 9:24,
+    .newsletter_date--month April 12
+
   .newsletter_container--date
-    .newsletter_icon--trophy
+    .newsletter_container--date_inner
+      .newsletter_icon--trophy
+      .newsletter_container--upcoming_project
+        .newsletter_container_upcoming_project--inner_container
+          .newsletter_container_upcoming_project--project
+            %h1.newsletter_container_upcoming_project--title
+              A new project is coming up
 
-    .newsletter_container--upcoming_project
-      .newsletter_container_upcoming_project--inner_container
-        .newsletter_container_upcoming_project--project
-          %h1.newsletter_container_upcoming_project--title
-            A new project is coming up
+            .newsletter_container_upcoming_project--image_container
+              = image_tag("apple.jpg", class: "newsletter_container_upcoming_project--header_image")
+              %h2.newsletter_container_upcoming_project--image_title
+                FUTURE OF FOOD & BEVERAGES
 
-          .newsletter_container_upcoming_project--image_container
-            = image_tag("", class: "newsletter_container_upcoming_project--header_image")
+            .newsletter_container_upcoming_project--description
+              %p.newsletter_container--description
+                How will digitalization impact how and what we eat in the future?
 
-          .newsletter_container_upcoming_project--description
-            %p.newsletter_container--description
-              How will digitalization impact how and what we eat in the future?
+              .newsletter_container_upcoming_project--prize_container
+                .newsletter_container_upcoming_project_icon--jovoto
+                  = image_tag("", class: "newsletter_container_upcoming_project--jovoto_image")
 
-            .newsletter_container_upcoming_project--prize_container
-              .newsletter_container_upcoming_project_icon--jovoto
-                = image_tag("", class: "newsletter_container_upcoming_project--jovoto_image")
-
-              .newsletter_container_upcoming_project--prize_amount_box
-                %h2.newsletter_container_upcoming_project--amount= "€8,000"
-                %p.newsletter_container_upcoming_project--amount_text= "PRIZE POOL"
+                .newsletter_container_upcoming_project--prize_amount_box
+                  %h2.newsletter_container_upcoming_project--amount= "€8,000"
+                  %p.newsletter_container_upcoming_project--amount_text= "PRIZE POOL"
 
 
-        .newsletter_container_upcoming_project--connect
-          = image_tag("", class: "newsletter_container_upcoming_project--tshirt_image")
+          .newsletter_container_upcoming_project--connect
+            = image_tag("", class: "newsletter_container_upcoming_project--tshirt_image")
 
-          .newsletter_container_upcoming_project--links
-            .newsletter_container_upcoming_project--title
-              Share this project and get a free T-Shirt!
-              = link_to "", "learn more", class: "newsletter_container_upcoming_project--links"
+            .newsletter_container_upcoming_project--links
+              .newsletter_container_upcoming_project--title
+                Share this project and get a free T-Shirt!
+                = link_to "", "learn more", class: "newsletter_container_upcoming_project--links"
 
-            %ul.newsletter_container_upcoming_project--linked_list
-              %li.newsletter_container_upcoming_project--list_item
-                = image_tag("", class: "newsletter_container_upcoming_project--list_icon")
-                .newsletter_container_upcoming_project--list_text= "Share"
-                .newsletter_container_upcoming_project--list_count= "28"
+              %ul.newsletter_container_upcoming_project--linked_list
+                %li.newsletter_container_upcoming_project--list_item.facebook
+                  = image_tag("", class: "newsletter_container_upcoming_project--list_icon")
+                  .newsletter_container_upcoming_project--list_text= "Share"
+                  .newsletter_container_upcoming_project--list_count= "28"
 
-              %li.newsletter_container_upcoming_project--list_item
-                = image_tag("", class: "newsletter_container_upcoming_project--list_icon")
-                .newsletter_container_upcoming_project--list_text= "Share"
+                %li.newsletter_container_upcoming_project--list_item.twitter
+                  = image_tag("", class: "newsletter_container_upcoming_project--list_icon")
+                  .newsletter_container_upcoming_project--list_text= "Tweet"
 
-              %li.newsletter_container_upcoming_project--list_item
-                = image_tag("", class: "newsletter_container_upcoming_project--list_icon")
-                .newsletter_container_upcoming_project--list_text= "Share"
+                %li.newsletter_container_upcoming_project--list_item.linkedin
+                  = image_tag("", class: "newsletter_container_upcoming_project--list_icon")
+                  .newsletter_container_upcoming_project--list_text= "Share"

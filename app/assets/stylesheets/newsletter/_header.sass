@@ -6,10 +6,289 @@
  * NOTE: This file contains css specific header for
  * newsletter component
  *
- * 1. Icons
- * 2. Images
- * 3.       
+ * 1. Layout
+ * 2. Date
+ * 3. Trophy
+ * 4. Content
  * ======================================= */
 
-// 1. Tooltip Styling
+$small-breakpoint:                                     500px
+$medium-breakpoint:                                    850px
+
+// 1. Layout
 // - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.newsletter
+  margin: 30px auto
+  max-width: 850px
+  position: relative
+  width: 100%
+
+
+// 2. Date
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.newsletter--date
+  display: inline-block
+
+  @media (max-width: $medium-breakpoint)
+    position: absolute
+    right: 10px
+    top: 30px
+
+  @media (min-width: $medium-breakpoint)
+    float: left
+    position: relative
+    width: 45px
+
+.newsletter_date--time,
+.newsletter_date--month
+  font-size: 1rem
+  display: inline-block
+
+.newsletter_date--time
+  @media (min-width: $medium-breakpoint)
+    font-size: 1.5rem
+
+.newsletter_date--month
+  @media (min-width: $medium-breakpoint)
+    font-size: 0.875rem
+
+.newsletter_container--date
+  width: 100%
+
+  @media (min-width: $small-breakpoint)
+    float: right
+    margin-left: -45px
+    // margin-left: 69px
+
+.newsletter_container--date_inner
+  @media (max-width: $small-breakpoint)
+    width: 100%
+
+  @media (min-width: $medium-breakpoint)
+    margin-left: 69px
+
+// 3. Trophy
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$newsletter_container_background_color:                             white
+
+.newsletter_icon--trophy
+  background: orange
+  border-radius: 50%
+  height: 40px
+  margin:
+    bottom: 20px
+    left: 10px
+  width: 40px
+
+  @media (min-width: $small-breakpoint)
+    float: left
+    height: 50px
+    margin-left: 0
+    width: 50px
+
+.newsletter_container--upcoming_project
+  width: 100%
+
+  @media (min-width: $small-breakpoint)
+    float: right
+    margin-left: -60px
+
+.newsletter_container_upcoming_project--inner_container
+  @media (min-width: $small-breakpoint)
+    margin-left: 80px
+
+.newsletter_container_upcoming_project--project
+  background: $newsletter_container_background_color
+  padding: 20px 10px
+  position: relative
+
+  @media (max-width: $small-breakpoint)
+    &:before
+      content: ""
+      border:
+        bottom: 10px solid $newsletter_container_background_color
+        right: 10px solid transparent
+        left: 10px solid transparent
+      height: 0
+      left: 20px
+      position: absolute
+      top: -10px
+      width: 0
+
+  @media (min-width: $small-breakpoint)
+    padding: 20px
+
+    &:before
+      content: ""
+      border:
+        right: 10px solid $newsletter_container_background_color
+        top: 10px solid transparent
+        bottom: 10px solid transparent
+      height: 0
+      left: -10px
+      position: absolute
+      top: 15px
+      width: 0
+
+
+// 4. Content
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$newsletter_container_background_color:                         #000
+$newsletter_container_background_text_color:                    white
+
+
+$newsletter_container_list_item_facebook_background:            #3B579D
+$newsletter_container_list_item_twitter_background:             #55ACEE
+$newsletter_container_list_item_linkedin_background:            #0077B5
+$newsletter_container_list_item_text_color:                     white
+$newsletter_container_upcoming_project_background_connect:      #F6F6F6
+
+.newsletter_container_upcoming_project--image_container
+  height: 140px
+  position: relative
+  margin-top: 10px
+  overflow: hidden
+  width: 100%
+
+  @media (min-width: $small-breakpoint)
+    height: 150px
+
+.newsletter_container_upcoming_project--header_image
+  background-size: cover
+  position: relative
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  -webkit-transform: translate(-50%, -50%)
+  -moz-transform: translate(-50%, -50%)
+
+.newsletter_container_upcoming_project--image_title
+  background: $newsletter_container_background_color
+  color: $newsletter_container_background_text_color
+  display: inline-block
+  font:
+    size: 1.125rem
+    weight: bold
+  left: 50%
+  line-height: 1.52rem
+  padding: 0 10px
+  position: absolute
+  top: 50%
+  transform: translate(-50%, -50%)
+  -webkit-transform: -webkit-translate(-50%, -50%)
+  -moz-transform: -moz-translate(-50%, -50%)
+  // box-shadow: 0.5em 0 0 $newsletter_container_background_text_color,-0.5em 0 0 $newsletter_container_background_text_color
+
+  @media (min-width: $small-breakpoint)
+    font-size: 1.52rem
+
+.newsletter_container_upcoming_project--description
+  margin-top: 20px
+  overflow: hidden
+
+.newsletter_container--description
+  float: left
+  line-height: 1.4rem
+  padding-right: 40px
+  width: calc(60% - 40px)
+
+  @media (min-width: $small-breakpoint)
+    padding-right: 20px
+    width: calc(49% - 20px)
+
+
+.newsletter_container_upcoming_project--prize_container
+  width: 30%
+  float: right
+  text-align: right
+
+  @media (min-width: $small-breakpoint)
+    width: 49%
+
+.newsletter_container_upcoming_project_icon--jovoto
+  width: 70px
+  height: 30px
+  background: black
+  display: block
+
+  @media (min-width: $small-breakpoint)
+    display: inline-block
+
+.newsletter_container_upcoming_project--prize_amount_box
+  @media (min-width: $small-breakpoint)
+    border-left: 1px solid grey
+    display: inline-block
+    height: 40px
+    margin-left: 10px
+    padding-left: 10px
+
+.newsletter_container_upcoming_project--amount
+  font:
+    size: 1.5rem
+    weight: bold
+
+  @media (max-width: $small-breakpoint)
+    margin-top: 20px
+
+.newsletter_container_upcoming_project--amount_text
+  font-size: 0.715rem
+
+
+
+
+
+.newsletter_container_upcoming_project--connect
+  width: 100%
+  padding: 10px
+  background: $newsletter_container_upcoming_project_background_connect
+
+  @media (min-width: $small-breakpoint)
+    padding: 10px 20px
+
+.newsletter_container_upcoming_project--tshirt_image
+  background: blue
+  height: 80px
+  width: 80px
+  display: none
+
+.newsletter_container_upcoming_project--title
+  width: 100%
+  display: inline-block
+
+.newsletter_container_upcoming_project--linked_list
+  width: 100%
+  display: inline-block
+
+.newsletter_container_upcoming_project--links
+  margin-top: 20px
+
+.newsletter_container_upcoming_project--linked_list
+  margin-top: 10px
+
+.newsletter_container_upcoming_project--list_item
+  color: $newsletter_container_list_item_text_color
+  cursor: pointer
+  display: inline-block
+  font-size: 0.875rem
+  margin-right: 10px
+  padding: 10px
+
+
+.facebook
+  background: $newsletter_container_list_item_facebook_background
+
+.twitter
+  background: $newsletter_container_list_item_twitter_background
+
+.linkedin
+  background: $newsletter_container_list_item_linkedin_background
+
+
+.newsletter_container_upcoming_project--list_text,
+.newsletter_container_upcoming_project--list_icon,
+.newsletter_container_upcoming_project--list_count
+  display: inline-block
