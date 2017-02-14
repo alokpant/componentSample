@@ -169,24 +169,28 @@ $newsletter_container_upcoming_project_title_color:             black
   -moz-transform: translate(-50%, -50%)
 
 .newsletter_container_upcoming_project--image_title
-  background: $newsletter_container_background_color
-  color: $newsletter_container_background_text_color
-  display: inline-block
-  font:
-    size: 1.125rem
-    weight: bold
+  display: inline
   left: 50%
-  line-height: 1.52rem
+  line-height: 2rem
   padding: 0 10px
   position: absolute
+  text-align: center
   top: 50%
   transform: translate(-50%, -50%)
   -webkit-transform: -webkit-translate(-50%, -50%)
   -moz-transform: -moz-translate(-50%, -50%)
-  // box-shadow: 0.5em 0 0 $newsletter_container_background_text_color,-0.5em 0 0 $newsletter_container_background_text_color
+  width: 80%
 
-  @media (min-width: $small-breakpoint)
-    font-size: 1.52rem
+  span
+    background: $newsletter_container_background_color
+    box-shadow: 10px 0 0 $newsletter_container_background_color,-10px 0 0 $newsletter_container_background_color
+    color: $newsletter_container_background_text_color
+    font:
+      size: 1.125rem
+      weight: bold
+
+    @media (min-width: $small-breakpoint)
+      font-size: 1.52rem
 
 .newsletter_container_upcoming_project--description
   margin-top: 20px
