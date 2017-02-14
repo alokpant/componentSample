@@ -200,7 +200,6 @@ $newsletter_container_upcoming_project_background_connect:      #F6F6F6
     padding-right: 20px
     width: calc(49% - 20px)
 
-
 .newsletter_container_upcoming_project--prize_container
   width: 30%
   float: right
@@ -210,10 +209,15 @@ $newsletter_container_upcoming_project_background_connect:      #F6F6F6
     width: 49%
 
 .newsletter_container_upcoming_project_icon--jovoto
+  display: inline-block
+  height: 30px
+  text-align: right
+  width: 70px
+
+.newsletter_container_upcoming_project--jovoto_image
   width: 70px
   height: 30px
   background: black
-  display: block
 
   @media (min-width: $small-breakpoint)
     display: inline-block
@@ -232,7 +236,7 @@ $newsletter_container_upcoming_project_background_connect:      #F6F6F6
     weight: bold
 
   @media (max-width: $small-breakpoint)
-    margin-top: 20px
+    margin-top: 10px
 
 .newsletter_container_upcoming_project--amount_text
   font-size: 0.715rem
@@ -242,11 +246,12 @@ $newsletter_container_upcoming_project_background_connect:      #F6F6F6
 
 
 .newsletter_container_upcoming_project--connect
-  width: 100%
+  width: calc(100% - 20px)
   padding: 10px
   background: $newsletter_container_upcoming_project_background_connect
 
   @media (min-width: $small-breakpoint)
+    width: calc(100% - 40px)
     padding: 10px 20px
 
 .newsletter_container_upcoming_project--tshirt_image
@@ -262,9 +267,6 @@ $newsletter_container_upcoming_project_background_connect:      #F6F6F6
 .newsletter_container_upcoming_project--linked_list
   width: 100%
   display: inline-block
-
-.newsletter_container_upcoming_project--links
-  margin-top: 20px
 
 .newsletter_container_upcoming_project--linked_list
   margin-top: 10px
